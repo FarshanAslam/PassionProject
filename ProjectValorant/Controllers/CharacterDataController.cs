@@ -36,7 +36,7 @@ namespace ProjectValorant.Controllers
             //Gather Result Set of Query into a variable
             MySqlDataReader ResultSet = cmd.ExecuteReader();
 
-            //Create an empty list of Author Names
+            //Create an empty list of Map Names
             List<Character> Characters = new List<Character> { };
 
             //Loop Through Each Row the Result Set

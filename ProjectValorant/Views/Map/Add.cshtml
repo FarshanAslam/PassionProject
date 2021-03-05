@@ -1,0 +1,34 @@
+﻿@model ProjectValorant.Models.Map
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<div id="containershow">
+    <nav>
+        <a class="navlink" href="/Map/List">Back To Maps</a>
+    </nav>
+    <h2>Add Map</h2>
+    <form method="POST" action="/Map/Create">
+        <div>
+            <label for="mapName">Map Name:</label>
+            <input type="text" id="mapName" name="mapName" />
+        </div>
+        <div>
+            <label for="AttackWinRate">Attack win rate:</label>
+            <input type="text" id="AttackWinRate" name="AttackWinRate" />
+        </div>
+        <div>
+            <label for="DefenderWinRate">Defender winrate:</label>
+            <input type="text" id="DefenderWinRate" name="DefenderWinRate" />
+        </div>
+        <div>
+            <label for="Popularity">Popularity:</label>
+            <input type="number" required min="0" step=".01" id="Popularity" name="Popularity" />
+        </div>
+        <div>
+            <input type="submit" value="Create Map" />
+        </div>
+    </form>
+</div>
+

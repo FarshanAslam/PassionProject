@@ -1,0 +1,12 @@
+﻿@model ProjectValorant.Models.Character
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<a class="navlink" href="/Character/List">Back to Characters</a>
+<div id="containershow">
+    <h2>@Model.characterfname @Model.characterlname</h2>
+    <p>Character Number: @Model.characterrole</p>
+    <p>Enrolment Date: @Model.dateadded</p>
+</div>

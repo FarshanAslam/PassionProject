@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ProjectValorant.Models.Map>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div id="containerlist">
+    <nav>
+        <a class="navlink" href="/Map/Add">Add Map</a>
+    </nav>
+    <h2>List of Maps</h2>
+    <form action="/Map/List" method="GET">
+        <input type="text" name="SearchKey" autocomplete="off" />
+        <input type="submit" value="Search" />
+    </form>
+    @foreach (var map in Model)
+    {
+<div class="list-group-item row">
+    <div class="col-md-12"><a href="/Map/Show/@map.mapid">@map.mapName @map.AttackWinRate</a></div>
+</div>}
+</div>

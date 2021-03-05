@@ -1,0 +1,33 @@
+﻿@model ProjectValorant.Models.Map
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<div id="containershow">
+    <nav>
+        <a class="navlink" href="/Map/Show/@Model.mapid">Back</a>
+    </nav>
+    <h2>Update Map</h2>
+    <form method="POST" action="/Map/Update/@Model.mapid">
+        <div>
+            <label for="mapName">Map Name:</label>
+            <input type="text" id="mapName" name="mapName" value="@Model.mapName" />
+        </div>
+        <div>
+            <label for="AttackWinRate">Attack winrate:</label>
+            <input type="text" id="AttackWinRate" name="AttackWinRate" value="@Model.AttackWinRate" />
+        </div>
+        <div>
+            <label for="DefenderWinRate">Defender Winrate:</label>
+            <input type="text" id="DefenderWinRate" name="DefenderWinRate" value="@Model.DefenderWinRate" />
+        </div>
+        <div>
+            <label for="Popularity">Popularity:</label>
+            <input type="number" required min="0" step=".01" id="Popularity" name="Popularity" value="@Model.Popularity" />
+        </div>
+        <div>
+            <input type="submit" value="Update Map" />
+        </div>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+﻿@model ProjectValorant.Models.Map
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<div id="containershow">
+    <nav>
+        <a class="navlink" href="/Map/Show/@Model.mapid">Cancel</a>
+    </nav>
+    <h2>Are you sure you want to delete @Model.mapName @Model.AttackWinRate?</h2>
+    <p>This action cannot be undone.</p>
+    <nav>
+        <form method="POST" action="/Map/Delete/@Model.mapid">
+            <button class="delbutton">
+                Confirm Delete
+            </button>
+        </form>
+    </nav>
+</div>

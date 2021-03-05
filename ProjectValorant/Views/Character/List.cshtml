@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ProjectValorant.Models.Character>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<p>This page should be showing information about all Characters</p>
+<div id="containerlist">
+    <h2>List of Characters</h2>
+    @foreach (var character in Model)
+    {
+<div class="list-group-item row">
+    <div class="col-md-12"><a href="/Character/Show/@character.characterid">@character.characterfname @character.characterlname</a></div>
+</div>}
+</div>

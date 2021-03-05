@@ -1,0 +1,17 @@
+﻿@model ProjectValorant.Models.Map
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<div id="containershow">
+    <nav>
+        <a class="navlink" href="/Map/List">Back to Maps</a>
+        <a class="dellink" href="/Map/DeleteConfirm/@Model.mapid">Delete</a>
+        <a class="navlink" href="/Map/Update/@Model.mapid">Update</a>
+    </nav>
+    <h2>@Model.mapName @Model.AttackWinRate</h2>
+    <p>Employee Number: @Model.DefenderWinRate</p>
+    <p>Hire Date: @Model.mapdateadded</p>
+    <p>Hourly Popularity: $@Model.Popularity</p>
+</div>
